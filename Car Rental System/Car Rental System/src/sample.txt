@@ -1,0 +1,194 @@
+import java.util.*;
+public class Main {
+
+    public static String[] Carlist = {"Mitsubishi", "Toyota", "Nissan", "Geely"};
+    public static String[] mitCars = {"Lancer X", "Lancer viii"};
+    public static String[] toyoCars = {"Aqua", "PRIUS"};
+    public static String[] nisCars = {"GTR", "Blue Bird"};
+    public static String[] geeCars = {"MX7", "Panda"};
+
+
+    public static void main(String[] args) {
+        for (int i = 0; i < Carlist.length; i++) {
+            System.out.print(Carlist[i] + "  ");
+            System.out.println(" ");
+        }
+        Scanner input = new Scanner(System.in);
+        System.out.println(" ");
+
+        System.out.println("Enter the car brand you need");
+        String UserBrand = input.nextLine();
+
+        if (UserBrand.equalsIgnoreCase("Mitsubishi")) {
+            for (int i = 0; i < mitCars.length; i++) {
+                System.out.print("||" + mitCars[i] + "||" + " ");
+            }
+        } else if (UserBrand.equalsIgnoreCase("Toyota")) {
+            for (int i = 0; i < toyoCars.length; i++) {
+                System.out.print("||" + toyoCars[i] + "||" + " ");
+            }
+
+        }else if (UserBrand.equalsIgnoreCase("Nissan")) {
+            for (int i = 0; i < nisCars.length; i++) {
+                System.out.print("||" + nisCars[i] + "||" + " ");
+            }
+        }else if (UserBrand.equalsIgnoreCase("Geely")) {
+            for (int i = 0; i < geeCars.length; i++) {
+                System.out.print("||" + geeCars[i] + "||" + " ");
+            }
+        }
+        System.out.println("Enter the model you need");
+        String mod = input.nextLine();
+
+        int ppmLancerX;
+        int ppmLancer;
+        int ppmAqua;
+        int ppmPrius;
+        int ppmGtr;
+        int ppmPanda;
+        int ppmMx7;
+
+            if(mod.equalsIgnoreCase("Lancer X")){
+                ppmLancerX = 450;
+                System.out.println("Price per mile = "+ppmLancerX);
+                System.out.println("price per Day= Rs.15 000");
+                System.out.println(" Enter the number of miles  ");
+                int dis = input.nextInt();
+                System.out.println("Enter the number of Days");
+                int day = input.nextInt();
+                Main m1 = new Main();
+                int cost =  m1.ppm(ppmLancerX,dis);
+                System.out.println("your full cost for miles = Rs."+cost);
+                int costFrDay = m1.perDay(day);
+                System.out.println("your full cost for Days = Rs."+costFrDay);
+
+                int fullCost = m1.fullCost(cost,costFrDay);
+                System.out.println("your full cost at the end = Rs."+fullCost);
+
+
+            }else if(mod.equalsIgnoreCase("Lancer viii")){
+                ppmLancer = 375;
+                System.out.println("Price per mile"+ppmLancer);
+                System.out.println("Price per day = Rs.15 000");
+                System.out.println(" Enter the number of miles  ");
+                int dis = input.nextInt();
+                System.out.println("Enter the number of Days");
+                int day = input.nextInt();
+                Main m1 = new Main();
+                int cost =  m1.ppm(ppmLancer,dis);
+                System.out.println("your full cost for miles = Rs."+cost);
+                int costFrDay = m1.perDay(day);
+                System.out.println("your full cost for Days = Rs."+costFrDay);
+
+                int fullCost = m1.fullCost(cost,costFrDay);
+                System.out.println("your full cost at the end = Rs."+fullCost);
+
+
+            } else if(mod.equalsIgnoreCase("Aqua")){
+                ppmAqua = 500;
+                System.out.println("Price per mile"+ppmAqua);
+                System.out.println("Price per day = Rs.15 000");
+                System.out.println(" Enter the number of miles  ");
+                int dis = input.nextInt();
+                System.out.println("Enter the number of Days");
+                int day = input.nextInt();
+                Main m1 = new Main();
+                int cost =  m1.ppm(ppmAqua,dis);
+                System.out.println("your full cost for miles = Rs."+cost);
+                int costFrDay = m1.perDay(day);
+                System.out.println("your full cost for Days = Rs."+costFrDay);
+
+                int fullCost = m1.fullCost(cost,costFrDay);
+                System.out.println("your full cost at the end = Rs."+fullCost);
+
+
+            }else if(mod.equalsIgnoreCase("PRIUS")){
+                ppmPrius = 600;
+                System.out.println("Price per mile"+ppmPrius);
+                System.out.println("Price per day = Rs.15 000");
+                System.out.println(" Enter the number of miles  ");
+                int dis = input.nextInt();
+                System.out.println("Enter the number of Days");
+                int day = input.nextInt();
+                Main m1 = new Main();
+                int cost =  m1.ppm(ppmPrius,dis);
+                System.out.println("your full cost for miles = Rs."+cost);
+                int costFrDay = m1.perDay(day);
+                System.out.println("your full cost for Days = Rs."+costFrDay);
+
+                int fullCost = m1.fullCost(cost,costFrDay);
+                System.out.println("your full cost at the end = Rs."+fullCost);
+
+
+            }else if(mod.equalsIgnoreCase("GTR")){
+                ppmGtr = 800;
+                System.out.println("Price per mile"+ppmGtr);
+                System.out.println("Price per day = Rs.15 000");
+                System.out.println(" Enter the number of miles  ");
+                int dis = input.nextInt();
+                System.out.println("Enter the number of Days");
+                int day = input.nextInt();
+                Main m1 = new Main();
+                int cost =  m1.ppm(ppmGtr,dis);
+                System.out.println("your full cost for miles = Rs."+cost);
+                int costFrDay = m1.perDay(day);
+                System.out.println("your full cost for Days = Rs."+costFrDay);
+
+                int fullCost = m1.fullCost(cost,costFrDay);
+                System.out.println("your full cost at the end = Rs."+fullCost);
+
+
+            }else if(mod.equalsIgnoreCase("MX7")){
+                ppmMx7 = 375;
+                System.out.println("Price per mile"+ppmMx7);
+                System.out.println("Price per day = Rs.15 000");
+                System.out.println(" Enter the number of miles  ");
+                int dis = input.nextInt();
+                System.out.println("Enter the number of Days");
+                int day = input.nextInt();
+                Main m1 = new Main();
+                int cost =  m1.ppm(ppmMx7,dis);
+                System.out.println("your full cost for miles = Rs."+cost);
+                int costFrDay = m1.perDay(day);
+                System.out.println("your full cost for Days = Rs."+costFrDay);
+
+                int fullCost = m1.fullCost(cost,costFrDay);
+                System.out.println("your full cost at the end = Rs."+fullCost);
+
+
+            }else if(mod.equalsIgnoreCase("Panda")){
+                ppmPanda = 375;
+                System.out.println("Price per mile"+ppmPanda);
+                System.out.println("Price per day = Rs.15 000");
+                System.out.println(" Enter the number of miles  ");
+                int dis = input.nextInt();
+                System.out.println("Enter the number of Days");
+                int day = input.nextInt();
+                Main m1 = new Main();
+                int cost =  m1.ppm(ppmPanda,dis);
+                System.out.println("your full cost for miles = Rs."+cost);
+                int costFrDay = m1.perDay(day);
+                System.out.println("your full cost for Days = Rs."+costFrDay);
+
+                int fullCost = m1.fullCost(cost,costFrDay);
+                System.out.println("your full cost at the end = Rs."+fullCost);
+
+
+            }
+
+
+
+    }
+    public int ppm(int x,int y) {
+        x = x*y;
+        return x;
+    }
+    public int perDay(int z){
+        z=z*15000;
+        return z;
+    }
+    public int fullCost(int a,int b){
+        int f =a+b;
+        return f;
+    }
+}

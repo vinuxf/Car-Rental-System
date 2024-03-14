@@ -72,7 +72,7 @@ public class Main {
         String index = input.next();
 
         Vehicle selectedVehicle = null;
-        //enhanced for loop
+      
         for(Vehicle vehicle : vehicles){
             if(Integer.parseInt(index) == vehicle.getIndex()){
                selectedVehicle = vehicle;
